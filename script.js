@@ -1,11 +1,11 @@
 const screenContainer = document.querySelector(".screenContainer");
-
+screenContainer.addEventListener("click", function() {console.log("ik")})
 // weell... will need a nice function to fill the screen with a customizable grid
 
 function createGrid(gridSize) {
     
     for (let i = gridSize; i > 0; i--) {
-        console.log("a")
+
         column = generateColumn(gridSize);
         screenContainer.appendChild(column);
     };
@@ -20,15 +20,20 @@ function generateColumn(rowNumber) {
     gridColumn.style.height = "100%";
 
     for (let i = rowNumber; i > 0; i--) {
-        console.log("b");
         const screenCell = document.createElement("div");
         screenCell.style.border = "0.25px solid black";
         screenCell.style.width = "100%";
         screenCell.style.flex = "1 1 auto";
-        gridColumn.appendChild(screenCell)
+        screenCell.addEventListener("mouseover", function(e) {changeColor(e)})
+        gridColumn.appendChild(screenCell);
     };
 
-    return gridColumn
+    return gridColumn;
 };
 
-createGrid(50)
+function changeColor(cell) {
+    cell.target.style.backgroundColor = "black"
+
+};
+
+createGrid(20)
