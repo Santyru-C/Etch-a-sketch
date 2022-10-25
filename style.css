@@ -1,6 +1,8 @@
 .screenContainer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px;
     height: 500px;
     width: 400px;
     border: 1px solid black;

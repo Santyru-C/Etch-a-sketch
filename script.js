@@ -6,12 +6,12 @@ function createGrid(gridSize) {
     for (let i = gridSize**2; i > 0; i--) {
         console.log(i)
         screenCell = document.createElement("div");
-        screenCell.style.height = "10px";
-        screenCell.style.height = "10px";
+        screenCell.style.height = "100%";
+        screenCell.style.flex = "1"
         screenCell.style.border = "0.25px solid black";
         
         screenContainer.appendChild(screenCell);
     };
 };
 
-createGrid(1)
+createGrid(8)
