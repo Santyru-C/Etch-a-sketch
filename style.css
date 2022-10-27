@@ -1,7 +1,8 @@
 .screenContainer {
     display: flex;
-    padding: 0px;
-    height: 500px;
-    width: 400px;
+    padding: 1px;
+    gap: 1px;
+    height: 810px;
+    width: 720px;
     border: 1px solid black;
 }
