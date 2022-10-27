@@ -5,13 +5,15 @@ const btn16 = document.querySelector("#btn16");
 const btn32 = document.querySelector("#btn32");
 const btn64 = document.querySelector("#btn64");
 
-btn16.addEventListener("click", () => {cleanScreen();});
+btn16.addEventListener("click", () => {createGrid(16);});
 btn32.addEventListener("click", () => {createGrid(32);});
 btn64.addEventListener("click", () => {createGrid(64);});
-// weell... will need a nice function to fill the screen with a customizable grid
+//using flex to test if it holds up against multiple columns and rows just like grid
 
 function createGrid(gridSize) {
     
+    cleanScreen();
+
     for (let i = gridSize; i > 0; i--) {
 
         column = generateColumn(gridSize);
@@ -51,4 +53,4 @@ function cleanScreen() {
     screenContainer.replaceChildren()
 };
 
-createGrid(16)
+createGrid(16);
