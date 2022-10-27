@@ -1,13 +1,21 @@
+let currentColor = "black"
+
 const screenContainer = document.querySelector(".screenContainer");
-screenContainer.addEventListener("click", function() {console.log("ik")});
 
 const btn16 = document.querySelector("#btn16");
 const btn32 = document.querySelector("#btn32");
 const btn64 = document.querySelector("#btn64");
 
+const btnRgb = document.querySelector("#rgb")
+const btnBlack = document.querySelector("#black")
+const btnEraser = document.querySelector("#eraser")
+
 btn16.addEventListener("click", () => {createGrid(16);});
 btn32.addEventListener("click", () => {createGrid(32);});
 btn64.addEventListener("click", () => {createGrid(64);});
+
+btnBlack.addEventListener("click", () => {currentColor = "black";});
+btnRgb.addEventListener("click", () => {currentColor = "RGB"})
 //using flex to test if it holds up against multiple columns and rows just like grid
 
 function createGrid(gridSize) {
@@ -42,15 +50,24 @@ function generateColumn(rowNumber) {
     return gridColumn;
 };
 
-function changeColor(cell) {
-    cell.target.style.backgroundColor = "black"
-
-};
-// button grid sizes 16 32 64
-// default 16
-// a function that cleans the screen div
 function cleanScreen() {
     screenContainer.replaceChildren()
 };
 
+// generate a random rgb color
+function generateRandomRgb() {
+    let o = Math.round, r = Math.random, s = 255;
+    return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')'    
+}
+
+function changeColor(cell) {
+    if (currentColor == "RGB") {
+    cell.target.style.backgroundColor = generateRandomRgb()};
+
+    if (currentColor == "black") {
+        cell.target.style.backgroundColor = "black";
+    }
+}
 createGrid(16);
+
+// hacer que el rgb sea continuo
