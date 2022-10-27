@@ -5,7 +5,9 @@ const btn16 = document.querySelector("#btn16");
 const btn32 = document.querySelector("#btn32");
 const btn64 = document.querySelector("#btn64");
 
-btn16.addEventListener("click", () => {simpleClean();});
+btn16.addEventListener("click", () => {cleanScreen();});
+btn32.addEventListener("click", () => {createGrid(32);});
+btn64.addEventListener("click", () => {createGrid(64);});
 // weell... will need a nice function to fill the screen with a customizable grid
 
 function createGrid(gridSize) {
@@ -45,6 +47,8 @@ function changeColor(cell) {
 // button grid sizes 16 32 64
 // default 16
 // a function that cleans the screen div
-function simpleClean() {
-    screenContainer.innerHTML = "";
+function cleanScreen() {
+    screenContainer.replaceChildren()
 };
+
+createGrid(16)
