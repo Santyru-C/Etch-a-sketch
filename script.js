@@ -2,6 +2,10 @@ let currentColor = "black"
 let currentGridSize = 16
 
 const screenContainer = document.querySelector(".screenContainer");
+screenContainer.addEventListener('animationend', () => {
+    screenContainer.classList.remove('animate__animated', 'animate__wobble')
+  });
+  
 
 const btn16 = document.querySelector("#btn16");
 const btn32 = document.querySelector("#btn32");
@@ -17,7 +21,8 @@ btn64.addEventListener("click", () => {createGrid(64), currentGridSize = 64;});
 
 btnBlack.addEventListener("click", () => {currentColor = "black";});
 btnRgb.addEventListener("click", () => {currentColor = "RGB"});
-btnErase.addEventListener("click", () => {createGrid(currentGridSize)})
+btnErase.addEventListener("click", () => {createGrid(currentGridSize)});
+btnErase.addEventListener("click", () => {screenContainer.classList.add('animate__animated', 'animate__wobble');});
 //using flex to test if it holds up against multiple columns and rows just like grid
 
 function createGrid(gridSize) {
