@@ -1,9 +1,10 @@
 .screenContainer {
+    background-color: azure;
     display: flex;
     padding: 1px;
     gap: 1px;
-    height: 810px;
-    width: 720px;
+    height: 720px;
+    width: 900px;
     border: 1px solid black;
 }
 
@@ -15,5 +16,7 @@
 #frame {
     display: flex;
     flex-direction: column;
-    height: 90%;
+    background-color: crimson;
+    height: 920px;
+    width: 760px;
 }

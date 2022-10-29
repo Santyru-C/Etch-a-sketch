@@ -77,3 +77,7 @@ function changeColor(cell) {
 }
 
 createGrid(16);
+
+// invertir la pantalla para hacerla mas ancha que larga
+// para eso sera necesario modificar la funcion que genera la grilla
+// en este caso tendra que generar un radio de n columnas por n*0.75 filas
