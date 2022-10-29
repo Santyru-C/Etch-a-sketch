@@ -6,3 +6,14 @@
     width: 720px;
     border: 1px solid black;
 }
+
+.mainContainer {
+    display: flex;
+    border: 1px solid black;
+}
+
+#frame {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+}
