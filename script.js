@@ -46,7 +46,6 @@ function generateColumn(rowNumber) {
 
     for (let i = rowNumber; i > 0; i--) {
         const screenCell = document.createElement("div");
-        //screenCell.style.border = "0.25px solid gray";
         screenCell.style.width = "100%";
         screenCell.style.flex = "1 1 auto";
         screenCell.addEventListener("mouseover", function(e) {changeColor(e)})
@@ -59,8 +58,6 @@ function generateColumn(rowNumber) {
 function cleanScreen() {
     screenContainer.replaceChildren()
 };
-
-// generate a random rgb color
 
 function generateRandomRgb() {
     const r = Math.floor(Math.random() * 256);
@@ -80,5 +77,3 @@ function changeColor(cell) {
 }
 
 createGrid(16);
-
-// hacer que el rgb sea continuo
