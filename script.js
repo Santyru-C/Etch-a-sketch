@@ -44,7 +44,7 @@ function generateColumn(rowNumber) {
     gridColumn.style.height = "100%";
     gridColumn.style.gap = "1px 0"
 
-    for (let i = rowNumber; i > 0; i--) {
+    for (let i = rowNumber*(3/4); i > 0; i--) {
         const screenCell = document.createElement("div");
         screenCell.style.width = "100%";
         screenCell.style.flex = "1 1 auto";
