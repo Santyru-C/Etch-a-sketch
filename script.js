@@ -4,25 +4,19 @@ let currentGridSize = 16
 const screenContainer = document.querySelector(".screenContainer");
 const frame = document.querySelector("#frame");
   
-
-const btn16 = document.querySelector("#btn16");
-const btn32 = document.querySelector("#btn32");
-const btn64 = document.querySelector("#btn64");
+const gridSlider = document.querySelector("#gridSlider");
+gridSlider.oninput = function() {createGrid(this.value), currentGridSize = this.value;};
 
 const btnRgb = document.querySelector("#rgb")
 const btnBlack = document.querySelector("#black")
 const btnErase = document.querySelector("#erase")
-
-btn16.addEventListener("click", () => {createGrid(16), currentGridSize = 16;});
-btn32.addEventListener("click", () => {createGrid(32), currentGridSize = 32;});
-btn64.addEventListener("click", () => {createGrid(64), currentGridSize = 64;});
 
 btnBlack.addEventListener("click", () => {currentColor = "black";});
 btnRgb.addEventListener("click", () => {currentColor = "RGB"});
 btnErase.addEventListener("click", () => {createGrid(currentGridSize)});
 btnErase.addEventListener("click", () => {frame.classList.add('animate__animated', 'animate__wobble');});
 frame.addEventListener('animationend', () => {
-    screenContainer.classList.remove('animate__animated', 'animate__wobble')
+    frame.classList.remove('animate__animated', 'animate__wobble')
   });
 //using flex to test if it holds up against multiple columns and rows just like grid
 
