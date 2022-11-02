@@ -15,9 +15,27 @@
 
 #frame {
     display: flex;
+    align-self: center;
     flex-direction: column;
     align-items: center;
     background-color: crimson;
     height: 780px;
-    width: 960px;
+    width: 1000px;
+    border-radius: 20px;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+html {
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
