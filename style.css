@@ -1,5 +1,5 @@
 .screenContainer {
-    background-color: azure;
+    background-color:#AAAAAA;
     display: flex;
     padding: 1px;
     gap: 1px;
@@ -28,10 +28,6 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-}
-
-html {
-
 }
 
 body {

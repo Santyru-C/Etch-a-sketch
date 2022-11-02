@@ -42,6 +42,7 @@ function generateColumn(rowNumber) {
     for (let i = rowNumber*(3/4); i > 0; i--) {
         const screenCell = document.createElement("div");
         screenCell.style.width = "100%";
+        screenCell.style.backgroundColor = "azure";
         screenCell.style.flex = "1 1 auto";
         screenCell.addEventListener("mouseover", function(e) {changeColor(e)})
         gridColumn.appendChild(screenCell);
