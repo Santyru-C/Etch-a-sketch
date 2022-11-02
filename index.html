@@ -10,19 +10,21 @@
     <title>Etch a Sketch</title>
 </head>
 <body>
-    <div class="mainContainer">
-        <div id="frame">
-            <div class="screenContainer"></div>
-            <div class="buttonContainer">
-                <button id="rgb">RGB</button>
-                <button id="black">Classic</button>
-                <div>
-                    <button id="btn16">16x16</button>
-                    <button id="btn32">32x32</button>
-                    <button id="btn64">64x64</button>
-                </div>
-                <button id="erase">Shake!</button>
+    <div id="frame">
+        <div>Etch-a-Sketch</div>
+        <div class="screenContainer"></div>
+        <div class="slidecontainer">
+            <input id="gridSlider" type="range" min="16" max="96" value="16" step="16">
+        </div>
+        <div class="buttonContainer">
+            <button id="rgb">RGB</button>
+            <button id="black">Classic</button>
+            <div>
+                <button id="btn16">16x16</button>
+                <button id="btn32">32x32</button>
+                <button id="btn64">64x64</button>
             </div>
+            <button id="erase">Shake!</button>
         </div>
     </div>
 </body>
