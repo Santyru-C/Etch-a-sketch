@@ -1,21 +1,13 @@
-.screenContainer {
-    background-color:#AAAAAA;
-    display: flex;
-    padding: 1px;
-    gap: 1px;
-    height: 684px;
-    width: 912px;
-    border: 1px solid black;
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
-#header {
-    margin: 10px 0;
-    font-size: 58px;
-    font-family: "Caveat", "Roboto", sans-serif;
-    font-weight: bold;
-    color: #ffc310;
-    -webkit-text-stroke: 1px black; 
-
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .mainContainer {
@@ -31,18 +23,26 @@
     background-color: crimson;
     padding: 5px 30px;
     border-radius: 20px;
-    box-shadow: 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 15px 15 px;
     border: 1px solid black;
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+#header {
+    margin: 10px 0;
+    font-size: 58px;
+    font-family: "Caveat", "Roboto", sans-serif;
+    font-weight: bold;
+    color: #ffc310;
+    -webkit-text-stroke: 1px black; 
+
 }
 
-body {
+.screenContainer {
+    background-color:#AAAAAA;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 1px;
+    gap: 1px;
+    height: 684px;
+    width: 912px;
+    border: 1px solid black;
 }
