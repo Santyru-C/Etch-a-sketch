@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="font stylesheet" href="https://fonts.googleapis.com/css?family=Caveat">
+    <link rel="main stylesheet" href="style.css">
+    <link rel="animation stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="script.js" defer></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,16 +12,16 @@
 </head>
 <body>
     <div id="frame">
-        <div>Etch-a-Sketch</div>
+        <div id="header">Etch-a-Sketch</div>
         <div class="screenContainer"></div>
         <div class="slidecontainer">
             <input id="gridSlider" type="range" min="16" max="80" value="16" step="16">
         </div>
-        <div class="buttonContainer">
-            <button id="rgb">RGB</button>
-            <button id="black">Classic</button>
-            <button id="erase">Shake!</button>
-        </div>
+    </div>
+    <div class="buttonContainer">
+        <button id="rgb">RGB</button>
+        <button id="black">Classic</button>
+        <button id="erase">Shake!</button>
     </div>
 </body>
 </html>
