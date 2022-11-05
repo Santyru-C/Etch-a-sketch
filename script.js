@@ -7,14 +7,13 @@ const frame = document.querySelector("#frame");
 const gridSlider = document.querySelector("#gridSlider");
 gridSlider.oninput = function() {createGrid(this.value), currentGridSize = this.value;};
 
-const btnRgb = document.querySelector("#rgb")
-const btnBlack = document.querySelector("#black")
-const btnErase = document.querySelector("#erase")
+const btnRgb = document.querySelector("#rgb");
+const btnBlack = document.querySelector("#black");
 
 btnBlack.addEventListener("click", () => {currentColor = "black";});
 btnRgb.addEventListener("click", () => {currentColor = "RGB"});
-btnErase.addEventListener("click", () => {createGrid(currentGridSize)});
-btnErase.addEventListener("click", () => {frame.classList.add('animate__animated', 'animate__wobble');});
+frame.addEventListener("click", () => {createGrid(currentGridSize)});
+frame.addEventListener("drag", () => {frame.classList.add('animate__animated', 'animate__wobble');});
 frame.addEventListener('animationend', () => {
     frame.classList.remove('animate__animated', 'animate__wobble')
   });
