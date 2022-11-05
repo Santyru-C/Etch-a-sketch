@@ -44,6 +44,7 @@ function generateColumn(rowNumber) {
         screenCell.style.width = "100%";
         screenCell.style.backgroundColor = "azure";
         screenCell.style.flex = "1 1 auto";
+        screenCell.style.opacity = "0.75"
         screenCell.addEventListener("mouseover", function(e) {changeColor(e)})
         gridColumn.appendChild(screenCell);
     };
