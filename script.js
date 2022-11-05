@@ -12,8 +12,8 @@ const btnBlack = document.querySelector("#black");
 
 btnBlack.addEventListener("click", () => {currentColor = "black";});
 btnRgb.addEventListener("click", () => {currentColor = "RGB"});
-frame.addEventListener("click", () => {createGrid(currentGridSize)});
-frame.addEventListener("drag", () => {frame.classList.add('animate__animated', 'animate__wobble');});
+frame.addEventListener("dblclick", () => {createGrid(currentGridSize)});
+frame.addEventListener("dblclick", () => {frame.classList.add('animate__animated', 'animate__wobble');});
 frame.addEventListener('animationend', () => {
     frame.classList.remove('animate__animated', 'animate__wobble')
   });
