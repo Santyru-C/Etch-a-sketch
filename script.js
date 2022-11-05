@@ -69,7 +69,7 @@ function changeColor(cell) {
     cell.target.style.backgroundColor = generateRandomRgb()};
 
     if (currentColor == "black") {
-        cell.target.style.backgroundColor = "black";
+        cell.target.style.backgroundColor = "rgb(112, 112, 112)";
     }
 }
 
