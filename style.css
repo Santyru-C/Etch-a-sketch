@@ -46,7 +46,7 @@ body {
     height: 684px;
     width: 912px;
     border: 1px solid black;
-    box-shadow: inset 5px 5px 5px 5px rgba(0,0,0,0.71);
+    box-shadow: 0px 0px 7px 7px rgba(0, 0, 0, 1) inset;
 }
 
 #gridSlider {
